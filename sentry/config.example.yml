@@ -9,11 +9,11 @@
 
 # mail.backend: 'smtp'  # Use dummy if you want to disable email entirely
 mail.host: 'smtp'
-# mail.port: 25
-# mail.username: ''
-# mail.password: ''
-# mail.use-tls: false
-# mail.use-ssl: false
+mail.port: 25
+mail.username: 'AKIAW26M5YWW3F3BRUDM'
+mail.password: 'BPKs+48G0HbOzz8LIkXmMLS/EzKSimUJ3LPyAv8Yrt/j'
+mail.use-tls: false
+mail.use-ssl: false
 
 # NOTE: The following 2 configs (mail.from and mail.list-namespace) are set
 #       through SENTRY_MAIL_HOST in sentry.conf.py so remove those first if
@@ -21,7 +21,7 @@ mail.host: 'smtp'
 
 
 # The email address to send on behalf of
-# mail.from: 'root@localhost'
+mail.from: 'engineer@budee.org'
 
 # The mailing list namespace for emails sent by this Sentry server.
 # This should be a domain you own (often the same domain as the domain
@@ -46,7 +46,7 @@ mail.host: 'smtp'
 # If this file ever becomes compromised, it's important to generate a new key.
 # Changing this value will result in all current sessions being invalidated.
 # A new key can be generated with `$ sentry config generate-secret-key`
-system.secret-key: '!!changeme!!'
+system.secret-key: 'budee7700'
 
 # The ``redis.clusters`` setting is used, unsurprisingly, to configure Redis
 # clusters. These clusters can be then referred to by name when configuring
@@ -65,17 +65,17 @@ system.secret-key: '!!changeme!!'
 # Uploaded media uses these `filestore` settings. The available
 # backends are either `filesystem` or `s3`.
 
-filestore.backend: 'filesystem'
-filestore.options:
-  location: '/data/files'
-dsym.cache-path: '/data/dsym-cache'
-releasefile.cache-path: '/data/releasefile-cache'
-
-# filestore.backend: 's3'
+# filestore.backend: 'filesystem'
 # filestore.options:
-#   access_key: 'AKIXXXXXX'
-#   secret_key: 'XXXXXXX'
-#   bucket_name: 's3-bucket-name'
+#   location: '/data/files'
+# dsym.cache-path: '/data/dsym-cache'
+# releasefile.cache-path: '/data/releasefile-cache'
+
+filestore.backend: 's3'
+filestore.options:
+  access_key: 'AKIAW26M5YWW5ZXLK3GB'
+  secret_key: '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'
+  bucket_name: 'budee-sentry'
 
 system.internal-url-prefix: 'http://web:9000'
 symbolicator.enabled: true
